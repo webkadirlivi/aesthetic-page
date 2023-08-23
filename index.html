@@ -9,17 +9,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
         integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+
     <div class="container">
         <div class="row">
             <div class="reveal">
-                <div class="h1 primary">C<span>o</span>nst<span>a</span>nce</div>
+                <div class="h1 primary">Her <span>Zaman</span></div>
             </div>
             <div class="reveal">
-                <div class="h1 primary">So<span>u</span>vill<span>e</span></div>
+                <div class="h1 primary"><span>Daha</span> İyiye</div>
             </div>
         </div>
         <div class="hr"></div>
@@ -42,7 +44,7 @@
             </div>
 
             <div class="nav-items projects">
-                <div>Project</div>
+                <div id="projectDiv">Project</div>
                 <div class="id">02</div>
             </div>
         </div>
@@ -107,8 +109,17 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/kursor"></script>
+    <script>
+        new kursor({
+            type: 1,
+            removeDefaultCursor: true,
+            color: "#FFFFFF",
+        })
+    </script>
     <script src="./revealanim.js"></script>
     <script src="./toggle.js"></script>
+    <script src="./path.js"></script>
 
 </body>
 

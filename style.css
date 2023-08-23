@@ -23,6 +23,7 @@ body {
     align-items: center;
 }
 
+
 .container {
     position: absolute;
     top: 0;
@@ -74,7 +75,7 @@ body {
 
 .p {
     padding: 0.8em 0;
-    font-family: "Soria";
+    font-family: "Kern";
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
@@ -95,17 +96,29 @@ body {
 }
 
 .nav-items>div {
-    padding: 1em;
+    padding: 0.5em;
     font-family: "Soria";
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .about {
     background: #fff;
+    transition: all 0.4s ease-in-out;
+}
+
+.about:hover {
+    background: #cac6c6;
+    border-radius: 40px 0 40px 0;
 }
 
 .projects {
     background: #17adf393;
+    transition: all 0.4s ease-in-out;
+}
+
+.projects:hover {
+    background: #0384c093;
+    border-radius: 40px 0 40px 0;
 }
 
 .projects>div {
@@ -114,7 +127,14 @@ body {
 
 .contact {
     background: #e7a92b;
+    transition: all 0.4s ease-in-out;
 }
+
+.contact:hover {
+    background: #dd9a14;
+    border-radius: 40px 0 40px 0;
+}
+
 
 .id {
     margin-right: 0.8em;
