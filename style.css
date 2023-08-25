@@ -96,24 +96,17 @@ body {
 }
 
 .nav-items>div {
-    padding: 0.5em;
+    padding: 0.6em;
     font-family: "Soria";
     font-size: 20px;
 }
 
 .about {
     background: #fff;
-    transition: all 0.4s ease-in-out;
-}
-
-.about:hover {
-    background: #cac6c6;
-    border-radius: 40px 0 40px 0;
 }
 
 .projects {
     background: #17adf393;
-    transition: all 0.4s ease-in-out;
 }
 
 .projects:hover {
@@ -121,13 +114,8 @@ body {
     border-radius: 40px 0 40px 0;
 }
 
-.projects>div {
-    color: #fff;
-}
-
 .contact {
     background: #e7a92b;
-    transition: all 0.4s ease-in-out;
 }
 
 .contact:hover {
@@ -135,6 +123,9 @@ body {
     border-radius: 40px 0 40px 0;
 }
 
+.projects>div {
+    color: #fff;
+}
 
 .id {
     margin-right: 0.8em;
