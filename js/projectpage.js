@@ -27,7 +27,7 @@ $(function () {
                 $('.cursor').css({left: x + 'px', top: y + 'px'});
             });
 
-            $('.accordion-items').each(function () {
+            $('.accordion-items, .cta, .title, .links-li').each(function () {
                 $(this).mouseenter(function () {
                    $('.cursor').addClass("active"); 
                 });
@@ -81,6 +81,13 @@ projecttl.from(".links ul li", 1, {
     stagger: {
         amount: 0.5,
     },
+},
+"-=1"
+);
+
+projecttl.from(".exit", 1, {
+    opacity:0,
+    ease: "power3.out",
 },
 "-=1"
 );
