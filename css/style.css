@@ -105,13 +105,16 @@ body {
     background: #fff;
 }
 
+.about:hover {
+    background: #d3c7c7;
+}
+
 .projects {
     background: #17adf393;
 }
 
 .projects:hover {
     background: #0384c093;
-    border-radius: 40px 0 40px 0;
 }
 
 .contact {
@@ -120,7 +123,6 @@ body {
 
 .contact:hover {
     background: #dd9a14;
-    border-radius: 40px 0 40px 0;
 }
 
 .projects>div {

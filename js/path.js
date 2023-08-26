@@ -5,7 +5,7 @@ document.getElementById("projectDiv").addEventListener("click", function() {
 });
 
 /*in project.html to index.html*/
-document.querySelector(".exit").addEventListener("click", function () {
+document.querySelector(".cta").addEventListener("click", function () {
     window.location.href = "index.html";
 })
 
