@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
+
+:root {
+    --pr-color: #fff;
+    --second-color: #0a0a0a;
+    --cubicbz: cubic-bezier(.9, 0, .1, 1);
+    --fz-big: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+}
+
+html,
+body {
+    background-color: var(--second-color);
+    cursor: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapp {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    padding-top: 130px;
+}
+
+.title {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 110px;
+    font-size: var(--fz-big);
+    text-transform: uppercase;
+    color: var(--pr-color);
+    user-select: none;
+    mix-blend-mode: difference;
+    z-index: 2;
+}
+
+.stroke {
+    color: transparent;
+    padding-left: 490px;
+    -webkit-text-stroke: 1px var(--pr-color);
+}
+
+.accordion {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content .links {
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    text-decoration: none;
+    display: flex;
+}
+
+.content .links ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.content .links ul li a {
+    color: #fff;
+}
+
+.accordion-list {
+    position: relative;
+    width: calc(50% - 50px);
+    z-index: 2;
+}
+
+.accordion-items {
+    position: relative;
+    padding-bottom: 30px;
+    list-style: none;
+    border-bottom: 2px solid #151515;
+}
+
+.accordion-items+.accordion-item {
+    margin-top: 30px;
+}
+
+.accordion-header {
+    position: relative;
+    padding-right: 110px;
+}
+
+.accordion-bl {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: 50%;
+    right: 0;
+    border: 2px solid #303030;
+    pointer-events: none;
+    transform: translateY(-50%) rotate(45deg);
+    transition: .4s;
+}
+
+.accordion-bl::before,
+.accordion-bl::after {
+    position: absolute;
+    content: "";
+    width: 13px;
+    height: 1.5px;
+    top: 50%;
+    left: 50%;
+    background: #303030;
+    transform: translate(-50% -50%);
+    will-change: transform;
+    transition: .4s;
+}
+
+.accordion-bl::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.accordion-items.active .accordion-bl {
+    border-color: var(--pr-color);
+}
+
+.accordion-items.active .accordion-bl::before,
+.accordion-items.active .accordion-bl::after {
+    background: var(--pr-color);
+}
+
+.accordion-items.active .accordion-bl::after {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(0);
+}
+
+.accordion-title {
+    font-weight: 400px;
+    font-size: 40px;
+    line-height: 33px;
+    color: var(--pr-color);
+}
+
+.accordion-body {
+    display: none;
+    padding-top: 15px;
+}
+
+.accordion-desc {
+    max-width: 520px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 150%;
+    color: #626262;
+}
+
+
+.accordion .accordion-items:first-child {
+    pointer-events: none;
+}
+
+.accordion .accordion-items:first-child .accordion-body {
+    display: block;
+}
+
+.accordion-img {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #151515;
+    overflow: hidden;
+}
+
+.accord-img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    object-fit: cover;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transform: scale(1.3);
+    will-change: transform;
+    transition: .8s var(--cubicbz);
+}
+
+.accord-img.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: scale(1);
+    transition-delay: .5s;
+}
+
+.cursor {
+    position: fixed;
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    border: 1px solid #303030;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.cursor-dot {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--pr-color);
+    clip-path: circle(10% at 50% 50%);
+    transition: clip-path .3s;
+}
+
+.cursor.active .cursor-dot {
+    clip-path: circle(25% at 50% 50%);
+}
