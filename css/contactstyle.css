@@ -1,0 +1,319 @@
+@font-face {
+    font-family: "Decay";
+    src: url(../fonts/Decay-White-Alt.otf);
+}
+
+@font-face {
+    font-family: "Frei";
+    src: url(../fonts/FreigeistMono-Black.otf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    position: relative;
+    display: flex;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+#header {
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+}
+
+#header nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+nav a {
+    color: #fff;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    font-family: "Frei";
+}
+
+nav a:hover {
+    color: #c93d4b;
+}
+
+nav h3 {
+    color: #fff;
+    font-size: 32px;
+    font-family: "Decay";
+}
+
+.cta {
+    position: relative;
+    background: transparent;
+    border: none;
+}
+
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-family: "Decay";
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+
+}
+
+.cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+}
+
+#arrow-horizontal path {
+    fill: #fff;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active svg {
+
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1.15);
+    transform-origin: bottom left;
+}
+
+.left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 50px;
+    color: #fff;
+}
+
+.left .left-text {
+    max-width: 60%;
+    font-size: 32px;
+    font-family: "Decay";
+}
+
+/*rolling text anim*/
+.rolling-text {
+    display: inline-block;
+    font-size: 60px;
+    line-height: 100px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.rolling-text:hover .letter,
+.rolling-text:hover.play .letter {
+    transform: translateY(-100%);
+}
+
+.rolling-text .block:last-child {
+    color: #c93d4b;
+}
+
+.rolling-text .letter {
+    display: inline-block;
+    transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.letter:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.letter:nth-child(2) {
+    transition-delay: 0.015s;
+}
+
+.letter:nth-child(3) {
+    transition-delay: 0.03s;
+}
+
+.letter:nth-child(4) {
+    transition-delay: 0.045s;
+}
+
+.letter:nth-child(5) {
+    transition-delay: 0.06s;
+}
+
+.letter:nth-child(6) {
+    transition-delay: 0.075s;
+}
+
+.letter:nth-child(7) {
+    transition-delay: 0.09s;
+}
+
+.letter:nth-child(8) {
+    transition-delay: 0.105s;
+}
+
+.letter:nth-child(9) {
+    transition-delay: 0.12s;
+}
+
+.letter:nth-child(10) {
+    transition-delay: 0.135s;
+}
+
+.letter:nth-child(11) {
+    transition-delay: 0.15s;
+}
+
+.letter:nth-child(12) {
+    transition-delay: 0.175s;
+}
+
+.letter:nth-child(13) {
+    transition-delay: 0.19s;
+}
+
+.letter:nth-child(14) {
+    transition-delay: 0.205s;
+}
+
+.letter:nth-child(15) {
+    transition-delay: 0.215s;
+}
+
+.letter:nth-child(16) {
+    transition-delay: 0.23s;
+}
+
+.letter:nth-child(17) {
+    transition-delay: 0.245s;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    font-size: 20px;
+}
+
+.container {
+    width: 850px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 3px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input,
+textarea {
+    margin: 1em 0 1em 0;
+    width: 500px;
+    position: relative;
+}
+
+.input input,
+textarea {
+    font-size: 100%;
+    padding: 0.5em;
+    outline: none;
+    color: #e8e8e8;
+    border: none;
+    border-bottom: 2px solid #e8e8e8;
+    background: transparent;
+    border-radius: none;
+    width: 100%;
+    resize: none;
+}
+
+.input label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    color: #e8e8e8;
+    padding: 0.7em;
+    margin-left: 0.1em;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
+}
+
+.input :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    padding: 0.4em;
+    background: transparent;
+}
+
+.input textarea:focus~label,
+.input textarea:valid~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    padding: 0.4em;
+    background: transparent;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+    border-color: rgb(37, 37, 211);
+}
+
+#form button {
+    color: #e8e8e8;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}

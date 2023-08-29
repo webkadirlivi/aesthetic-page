@@ -39,3 +39,23 @@ function animateOpenNav() {
 
     
 }
+
+function cursor () {
+    $(window).on('mousemove', function (e) {
+        let x = e.clientX;
+        let y = e.clientY;
+
+        $('.cursor').css({left: x + 'px', top: y + 'px'});
+    });
+
+    $('.accordion-items, .cta, .title, .links-li').each(function () {
+        $(this).mouseenter(function () {
+           $('.cursor').addClass("active"); 
+        });
+
+        $(this).mouseleave(function () {
+            $('.cursor').removeClass("active");
+        });
+    });
+}
+cursor();

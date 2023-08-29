@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./css/contactstyle.css">
+    <title>Contact</title>
+</head>
+
+<body>
+
+    <header id="header">
+        <nav>
+            <a href="contact.html">Kadir Livi</a>
+            <h3>Frontend</h3>
+            <button onclick="window.location.href='index.html'" class="cta">
+                <span class="hover-underline-animation"> Back to Main </span>
+                <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                    id="arrow-horizontal">
+                    <path transform="translate(30)"
+                        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                        id="Path_10"></path>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <div class="left">
+        <div class="left-text">
+            <h1 class=" rolling-text">Let's Collaborate</h1>
+        </div>
+        <div class="left-text">
+            <h1 class="rolling-text">Creative Projects</h1>
+        </div>
+        <div class="left-text">
+            <p class="rolling-text">Get in touch </p>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="container-right">
+            <form id="form">
+                <div class="input">
+                    <input required="" type="text">
+                    <label for="name">Name</label>
+                </div>
+                <div class="input">
+                    <input required="" type="text">
+                    <label for="email">E-mail</label>
+                </div>
+                <div class="input">
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit">Submit →</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="./js/contactpage.js"></script>
+    <script src="./js/path.js"></script>
+</body>
+
+</html>
