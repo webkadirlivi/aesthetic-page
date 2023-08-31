@@ -12,7 +12,18 @@
 <body>
     <div class="wrapp">
         <section class="reveal">
-            <h1 class="title">Projects <span>by ME</span></h1>
+            <div class="infos">
+                <h1 class="title">Projects <span>by ME</span></h1>
+                <button onclick="window.location.href='index.html'" class="cta exit">
+                    <span class="hover-underline-animation"> Back to Main </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </button>
+            </div>
             <div class="reveal-wrapp">
                 <div class="reveal-img">
                     <div class="reveal-img-item">
@@ -90,8 +101,43 @@
                 </div>
             </div>
         </section>
+
+        <span class="cursor">
+            <span class="cursor-dot"></span>
+        </span>
     </div>
 
+    <!--CURSOR-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            'use strict';
+
+            function cursor() {
+                window.addEventListener('mousemove', function (e) {
+                    let x = e.clientX;
+                    let y = e.clientY;
+
+                    document.querySelector('.cursor').style.left = x + 'px';
+                    document.querySelector('.cursor').style.top = y + 'px';
+                });
+
+                let elementsToTrack = document.querySelectorAll('.reveal-img-img');
+
+                elementsToTrack.forEach(function (element) {
+                    element.addEventListener('mouseenter', function () {
+                        document.querySelector('.cursor').classList.add("active");
+                    });
+
+                    element.addEventListener('mouseleave', function () {
+                        document.querySelector('.cursor').classList.remove("active");
+                    });
+                });
+            }
+
+            cursor();
+        });
+
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
         integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="

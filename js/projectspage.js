@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     trigger: imgNum,
                     start: "top 60%",
                     toggleActions: "play none none none",
-                    markers: true
                 }
             });
         });
@@ -34,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     start: "top 70%",
                     end: "bottom 60%",
                     toggleActions: "play none none none",
-                    markers: true
                 }
             });
         });
@@ -53,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     start: "top 70%",
                     end: "bottom 60%",
                     toggleActions: "play none none none",
-                    markers: true
                 }
             });
         });
@@ -73,10 +70,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     start: "top 70%",
                     end: "bottom 60%",
                     toggleActions: "play none none none",
-                    markers: true
                 }
             });
         });
     });
-    "-1.5"
+    "-1.7"
 });
+

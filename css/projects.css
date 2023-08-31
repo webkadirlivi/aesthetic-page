@@ -21,8 +21,111 @@
     font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
+html,
+body {
+    cursor: none;
+}
+
 body {
     background: var(--sc-color);
+}
+
+.cursor {
+    position: fixed;
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    border: 1px solid #303030;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.cursor-dot {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--pr-color);
+    clip-path: circle(10% at 50% 50%);
+    transition: clip-path .3s;
+}
+
+.cursor.active .cursor-dot {
+    clip-path: circle(50% at 50% 50%);
+    background-image: url(/images/cursor.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.infos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cta {
+    position: relative;
+    padding: 10px 20px;
+    background: transparent;
+    border: none;
+}
+
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+
+}
+
+.cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+}
+
+#arrow-horizontal path {
+    fill: #fff;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active svg {
+
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1.15);
+    transform-origin: bottom left;
 }
 
 .wrapp {
