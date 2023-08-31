@@ -1,7 +1,7 @@
 
 /* in index.html to project.html*/
 document.getElementById("projectDiv").addEventListener("click", function() {
-    window.location.href = "project.html";
+    window.location.href = "aboutme.html";
 });
 
 document.getElementById("contactDiv").addEventListener("click", function() {

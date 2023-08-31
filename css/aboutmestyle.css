@@ -55,7 +55,6 @@ a {
 
 .stroke {
     color: transparent;
-    padding-left: 490px;
     -webkit-text-stroke: 1px var(--pr-color);
 }
 
