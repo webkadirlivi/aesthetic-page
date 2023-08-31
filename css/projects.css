@@ -1,0 +1,109 @@
+@font-face {
+    font-family: "Frei";
+    src: url(/fonts/FreigeistMono-Black.otf);
+}
+
+:root {
+    --pr-color: #f0e9e9;
+    --sc-color: #0a0a0a;
+    --bg-color: #131313;
+    --cubicbz: cubic-bezier(.9, 0, .1, 1);
+    --fz-big: 60px;
+    --gap: 150px;
+}
+
+* {
+    box-sizing: border-box;
+    font-weight: 800;
+    font-family: "Frei";
+    margin: 0;
+    padding: 0;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+body {
+    background: var(--sc-color);
+}
+
+.wrapp {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0 150px;
+    z-index: 1;
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: 80px;
+    font-size: var(--fz-big);
+    text-transform: uppercase;
+    color: var(--pr-color);
+}
+
+.title span {
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--pr-color);
+}
+
+.reveal {
+    padding: 50px;
+    padding-top: 80px;
+    padding-bottom: 0;
+}
+
+.reveal-img {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 150px;
+    width: 100%;
+    height: auto;
+    padding-bottom: 170px;
+}
+
+.reveal-img-item {
+    position: relative;
+    width: calc(50% - (var(--gap)/2));
+    height: 650px;
+    padding-left: 53px;
+    overflow: hidden;
+}
+
+.reveal-img-item:nth-child(even) {
+    transform: translateY(150px);
+}
+
+.reveal-img-num {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 40px;
+    color: var(--pr-color);
+    writing-mode: vertical-lr;
+    transform: scale(-1, -1);
+}
+
+.reveal-img-inner,
+.reveal-img-bl {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+}
+
+.reveal-img-inner {
+    background: var(--bg-color);
+}
+
+.reveal-img-bl {
+    overflow: hidden;
+}
+
+.reveal-img-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    will-change: transform;
+}
